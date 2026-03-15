@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naseej Digital Agency</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        naseejDeep: '#040714',     // Deepest background color
+                        naseejNavy: '#0a1029',     // Dark Navy for background blending
+                        naseejPurple: '#1e103d',   // Midnight Purple for gradient blending
+                        naseejCyan: '#00eaff',     // Neon Cyan accent
+                        naseejViolet: '#bd00ff',   // Neon Violet accent
+                        glass: 'rgba(255, 255, 255, 0.03)', // Base for glass cards
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 15px rgba(0, 234, 255, 0.5)',
+                        'neon-violet': '0 0 15px rgba(189, 0, 255, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom deep gradient background */
+        .deep-gradient-bg {
+            background: radial-gradient(circle at top right, #1e103d 0%, #0a1029 40%, #040714 100%);
+        }
+        
+        /* Glassmorphism card style */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Subtle infinite float animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="deep-gradient-bg text-white antialiased font-sans overflow-x-hidden">
+
+    <header class="sticky top-0 z-50 bg-naseejDeep/60 backdrop-blur-lg border-b border-white/5">
+        <nav class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="text-3xl font-black tracking-tighter text-white">
+                Naseej<span class="text-naseejCyan">.</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition relative group">
+                    Services
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-naseejCyan group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#process" class="text-sm font-medium text-slate-300 hover:text-white transition relative group">
+                    Method
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-naseejViolet group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#team" class="text-sm font-medium text-slate-300 hover:text-white transition relative group">
+                    Visionaries
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-naseejCyan group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#" class="text-sm font-medium text-slate-300 hover:text-white transition relative group">
+                    Journal
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-naseejViolet group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <a href="#" class="border border-naseejCyan text-naseejCyan px-8 py-3 rounded-full text-sm font-bold shadow-neon-cyan hover:bg-naseejCyan hover:text-naseejDeep hover:shadow-lg transition-all duration-300">
+                Start a Project
+            </a>
+        </nav>
+    </header>
+
+    <section class="relative pt-32 pb-40 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-7xl md:text-8xl font-black text-white leading-none tracking-tighter">
+                    We Define <br> 
+                    <span class="text-naseejCyan">Digital</span> 
+                    Prestige<span class="text-naseejViolet">.</span>
+                </h1>
+                
+                <p class="mt-10 text-xl text-slate-300 max-w-2xl mx-auto md:mx-0 leading-relaxed font-medium">
+                    Naseej is an elite digital catalyst. We don't just build presence; we cultivate digital prestige for ambitious brands through avant-garde strategy and design.
+                </p>
+
+                <div class="mt-16 flex flex-col md:flex-row items-center gap-6 justify-center md:justify-start">
+                    <button class="bg-white text-naseejDeep px-10 py-5 rounded-full font-black shadow-2xl hover:bg-naseejCyan hover:scale-105 transition-all duration-300">
+                        Explore Our Essence
+                    </button>
+                    <button class="flex items-center gap-3 text-white border-b-2 border-naseejViolet px-2 py-3 font-bold hover:text-naseejViolet transition group">
+                        See Our Impact <i class="fas fa-arrow-right text-xs group-hover:translate-x-2 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex-1 relative animate-float">
+                <div class="w-full aspect-square bg-gradient-to-br from-naseejCyan/20 to-naseejViolet/20 rounded-full blur-[100px] absolute"></div>
+                <div class="glass-card w-full aspect-square rounded-4xl overflow-hidden border border-white/10 shadow-2xl relative">
+    <img src="images/1.jpg" alt="Digital Prestige" class="w-full h-full object-cover">
+</div>
+            </div>
+        </div>
+        <div class="absolute inset-0 deep-gradient-bg opacity-70"></div>
+    </section>
+
+    <section id="services" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl font-black text-white tracking-tight">Avant-Garde Solutions</h2>
+                <p class="mt-6 text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">
+                    Crafted for brands that demand distinction.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="glass-card p-10 rounded-4xl border border-white/5 shadow-xl hover:-translate-y-3 transition-transform duration-300 cursor-pointer group hover:border-naseejCyan hover:shadow-neon-cyan">
+                    <div class="w-20 h-20 bg-darkNavy rounded-2xl flex items-center justify-center mb-10 border border-white/10 group-hover:border-naseejCyan/20">
+                        <i class="fas fa-microchip text-naseejCyan text-4xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-5 leading-tight">Digital Ecosystem Architecture</h3>
+                    <p class="text-slate-400 mb-8 leading-relaxed text-sm">We architect interconnected digital realms focused on user prestige and frictionless experience.</p>
+                    <a href="#" class="text-naseejCyan font-bold text-sm group-hover:underline">Explore Architecture</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-4xl border border-white/5 shadow-xl hover:-translate-y-3 transition-transform duration-300 cursor-pointer group hover:border-naseejViolet hover:shadow-neon-violet">
+                    <div class="w-20 h-20 bg-darkNavy rounded-2xl flex items-center justify-center mb-10 border border-white/10 group-hover:border-naseejViolet/20">
+                        <i class="fas fa-rocket text-naseejViolet text-4xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-5 leading-tight">Prestige Growth Acceleration</h3>
+                    <p class="text-slate-400 mb-8 leading-relaxed text-sm">Data-driven multichannel campaigns engineered to scale visibility and convert high-value audiences.</p>
+                    <a href="#" class="text-naseejViolet font-bold text-sm group-hover:underline">Explore Acceleration</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-4xl border border-white/5 shadow-xl hover:-translate-y-3 transition-transform duration-300 cursor-pointer group hover:border-naseejCyan hover:shadow-neon-cyan">
+    <div class="w-20 h-20 bg-darkNavy rounded-2xl flex items-center justify-center mb-10 border border-white/10 group-hover:border-naseejCyan/20">
+        <i class="fas fa-feather-alt text-naseejCyan text-4xl group-hover:scale-110 transition-transform"></i>
+    </div>
+    
+    <h3 class="text-2xl font-bold text-white mb-5 leading-tight">Brand Narrative & Influence</h3>
+    <p class="text-slate-400 mb-8 leading-relaxed text-sm">We cultivate distinct, influential brand voices through compelling storytelling and content innovation.</p>
+    
+    <a href="#" class="text-naseejCyan font-bold text-sm group-hover:underline">Explore Influence</a>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-32 bg-naseejDeep/50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-28">
+                <h2 class="text-5xl font-black text-white tracking-tight">Our Precision Method</h2>
+                <p class="mt-6 text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">
+                    How we transform ambition into digital reality.
+                </p>
+            </div>
+
+            <div class="relative grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="absolute top-10 left-10 right-10 h-0.5 bg-slate-700 hidden md:block"></div>
+
+                <div class="text-center relative group">
+                    <div class="w-20 h-20 glass-card rounded-full flex items-center justify-center mx-auto mb-8 border border-white/10 shadow-lg relative z-10 group-hover:border-naseejCyan group-hover:shadow-neon-cyan transition-all duration-300">
+                        <span class="text-2xl font-black text-naseejCyan">01</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-4">Discovery</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed px-4">Immersion into your brand essence, challenges, and aspirations.</p>
+                </div>
+
+                <div class="text-center relative group">
+                    <div class="w-20 h-20 glass-card rounded-full flex items-center justify-center mx-auto mb-8 border border-white/10 shadow-lg relative z-10 group-hover:border-naseejViolet group-hover:shadow-neon-violet transition-all duration-300">
+                        <span class="text-2xl font-black text-naseejViolet">02</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-4">Stratagem</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed px-4">Forging the unique blue-print for digital distinction.</p>
+                </div>
+
+                <div class="text-center relative group">
+                    <div class="w-20 h-20 glass-card rounded-full flex items-center justify-center mx-auto mb-8 border border-white/10 shadow-lg relative z-10 group-hover:border-naseejCyan group-hover:shadow-neon-cyan transition-all duration-300">
+                        <span class="text-2xl font-black text-naseejCyan">03</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-4">Creation</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed px-4">avant-garde design and technology bringing strategy to life.</p>
+                </div>
+
+                <div class="text-center relative group">
+                    <div class="w-20 h-20 glass-card rounded-full flex items-center justify-center mx-auto mb-8 border border-white/10 shadow-lg relative z-10 group-hover:border-naseejViolet group-hover:shadow-neon-violet transition-all duration-300">
+                        <span class="text-2xl font-black text-naseejViolet">04</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-4">Impact</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed px-4">Launching with precision to scale and measure prestige.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-32 relative">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <div class="text-center mb-24">
+            <h2 class="text-5xl font-black text-white tracking-tight">The Digital Visionaries</h2>
+            <p class="mt-6 text-slate-300 max-w-2xl mx-auto text-lg leading-relaxed">
+                Cultivating digital prestige through collective, avant-garde expertise.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            
+            <div class="glass-card rounded-[2.5rem] p-6 border border-white/5 shadow-xl group overflow-hidden cursor-pointer hover:border-blue-500 transition-all duration-300 hover:shadow-neon-cyan">
+                <div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8">
+                    <img src="images/2.jpg" alt="Amr Khaled - Strategy Director" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    
+                    <div class="absolute inset-0 flex items-center justify-center gap-3 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 backdrop-blur-sm rounded-[2rem]">
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-white hover:text-blue-400 transition shadow-md">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-white hover:text-blue-400 transition shadow-md">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-white tracking-tight">Amr Khaled</h3>
+                    <p class="text-sm font-semibold text-blue-400 mt-2 uppercase tracking-wider">Strategy Director</p>
+                    <p class="text-xs text-slate-400 mt-5 leading-relaxed line-clamp-2">Nurtures brand prestige through rigorous stratagem.</p>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-[2.5rem] p-6 border border-white/5 shadow-xl group overflow-hidden cursor-pointer hover:border-naseejViolet transition-all duration-300 hover:shadow-neon-violet">
+                <div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8">
+                    <img src="images/3.jpg" alt="Laila Said - Creative Lead" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 flex items-center justify-center gap-3 bg-purple-900/10 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 backdrop-blur-sm rounded-[2rem]">
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-white hover:text-naseejViolet transition shadow-md">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-white hover:text-naseejViolet transition shadow-md">
+                            <i class="fab fa-medium-m"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-white tracking-tight">Laila Said</h3>
+                    <p class="text-sm font-semibold text-naseejViolet mt-2 uppercase tracking-wider">Creative Lead</p>
+                    <p class="text-xs text-slate-400 mt-5 leading-relaxed line-clamp-2">Translates raw ideas into avant-garde visual narratives.</p>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-[2.5rem] p-6 border border-white/5 shadow-xl group overflow-hidden cursor-pointer hover:border-green-500 transition-all duration-300 hover:shadow-neon-green">
+                <div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8">
+                    <img src="images/4.jpg" alt="Youssef Ali - Lead Developer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 flex items-center justify-center gap-3 bg-green-900/10 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 backdrop-blur-sm rounded-[2rem]">
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-white hover:text-green-400 transition shadow-md">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-white hover:text-green-400 transition shadow-md">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-white tracking-tight">Youssef Ali</h3>
+                    <p class="text-sm font-semibold text-green-400 mt-2 uppercase tracking-wider">Lead Developer</p>
+                    <p class="text-xs text-slate-400 mt-5 leading-relaxed line-clamp-2">Engineers robust, sleek digital architectures.</p>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-[2.5rem] p-6 border border-white/5 shadow-xl group overflow-hidden cursor-pointer hover:border-amber-500 transition-all duration-300 hover:shadow-neon-amber">
+                <div class="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-8">
+                    <img src="images/5.jpg" alt="Noha Hassan - Content Catalyst" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 flex items-center justify-center gap-3 bg-yellow-900/10 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 backdrop-blur-sm rounded-[2rem]">
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-white hover:text-amber-400 transition shadow-md">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-white hover:text-amber-400 transition shadow-md">
+                            <i class="fab fa-medium-m"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-white tracking-tight">Noha Hassan</h3>
+                    <p class="text-sm font-semibold text-amber-500 mt-2 uppercase tracking-wider">Content Catalyst</p>
+                    <p class="text-xs text-slate-400 mt-5 leading-relaxed line-clamp-2">Sparks discourse with influential digital narratives.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
